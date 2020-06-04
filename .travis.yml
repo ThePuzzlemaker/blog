@@ -1,4 +1,6 @@
 language: rust
+dist: xenial
+os: linux
 
 cache:
   - cargo
@@ -15,10 +17,10 @@ script:
   - mdbook build . && mdbook test .
 
 deploy:
-  provider: pages
+  provider: pages:git
   cleanup: false
-  github-token: $GITHUB_TOKEN
-  local-dir: ./book
-  keep-history: false
-  on:
-    branch: gh-pages
+  token: $GITHUB_TOKEN
+  local_dir: ./book
+  keep_history: false
+  edge: true
+  target_branch: gh-pages
