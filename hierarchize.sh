@@ -14,7 +14,6 @@ head "-n$((SUMMARYLENGTH-1))" SUMMARY.md > SUMMARY.md2
 mv -f SUMMARY.md2 SUMMARY.md
 
 # Begin generation
-echo "## BEGIN AUTO-ADD" >> SUMMARY.md
 echo "- [Posts](./posts/index.md)" >> SUMMARY.md
 
 cd posts
