@@ -56,3 +56,5 @@ I do program stuff. I've worked with Minecraft, Unity, OpenGL (reluctantly), the
 - <a href="mailto:tpzker@thepuzzlemaker.info"><i class="fa fa-envelope"></i> Email: `tpzker@thepuzzlemaker.info`</a>
 
 - <i class="fab fa-discord"></i> Discord: `Paradoxical#2936`
+
+- <a href="https://thepuzzlemaker.info">Main Site: https://thepuzzlemaker.info</a>
