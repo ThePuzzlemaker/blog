@@ -1,7 +1,5 @@
 # About This Site
 
-This page is going to (try to) answer some possible common questions about this site.
-
 ## What is this site?
 
 This site is my blog. I'm not using a CMS (i.e. Wordpress, what I used to use) for it anymore, as I honestly find them irritating at times.
