@@ -1,0 +1,34 @@
+[book]
+authors = ["The Puzzlemaker"]
+language = "en"
+multilingual = false
+src = "src"
+title = "The Puzzlemaker » Blog"
+description = "This site is my blog. I'm not using a CMS (i.e. Wordpress, what I used to use) for it anymore, as I honestly find them irritating at times."
+
+[build]
+create-missing = true
+
+[output.html]
+mathjax-support = true
+default-theme = "coal"
+curly-quotes = true
+no-section-label = true
+git-repository-url = "https://github.com/ThePuzzlemaker/blog"
+additional-js = ["src/fontawesome5kit.js"]
+
+[output.html.fold]
+enable = false
+
+[output.html.playpen]
+editable = true
+line-numbers = true
+
+[output.html.search]
+use-boolean-and = true
+boost-hierarchy = 2
+expand = true
+heading-split-level = 2
+
+[rust]
+edition = "2018"
