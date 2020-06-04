@@ -24,3 +24,4 @@ deploy:
   keep_history: false
   edge: true
   target_branch: gh-pages
+  fqdn: blog.thepuzzlemaker.info
