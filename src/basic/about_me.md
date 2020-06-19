@@ -41,7 +41,7 @@ I do program stuff. I've worked with Minecraft, Unity, OpenGL (reluctantly), the
 
 ## Dotfiles
 
-***Coming soon...***
+See [the GitHub repo](https://github.com/ThePuzzlemaker/dotfiles.git)
 
 ## Links/Socials
 
