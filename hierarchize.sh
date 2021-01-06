@@ -17,22 +17,32 @@ mv -f SUMMARY.md2 SUMMARY.md
 echo "- [Posts](./posts/index.md)" >> SUMMARY.md
 
 cd posts
-declare -a DIRS=$(find -type d -not -name . -printf "%P\n")
-for DIR in $DIRS
+# We're using reverse sort here as we want series folders to be sorted before date folders
+# and that also helps with dates, as they will be (mostly) sorted by newest to oldest
+find -type d -not -name . -printf "%P\0" | sort -zr |
+while IFS= read -r -d '' DIR
 do
+  DIR_NORMALIZED=$(echo "$DIR" | tr '_' ' ')
   # Automatically add src/posts/index.md to directories without it
-  find $DIR -type f -name index.md | grep index.md 2>&1 > /dev/null || NOT_FOUND=1
+  find "$DIR" -type f -name index.md | grep index.md 2>&1 > /dev/null || NOT_FOUND=1
   if [ ! -z $NOT_FOUND ]; then
     touch "$DIR/index.md"
   fi
-  echo "  - [$DIR](./posts/$DIR/index.md)" >> ../SUMMARY.md
+  echo "  - [$DIR_NORMALIZED](./posts/$DIR/index.md)" >> ../SUMMARY.md
   # Get files in DIR
-  declare -a FILES=$(find "$DIR" -type f -not -name index.md -printf "%P\n")
-  for FILE in $FILES
+  find -L "$DIR" -type f -not -name index.md -printf "%P\0" | sort -z |
+  while IFS= read -r -d '' FILE
   do
     # Get post name from the first line (e.g. "# Hello, world!" -> "Hello, world!")
     POSTNAME="$(head -n1 "$DIR/$FILE" | awk '{print substr($0,3);}')"
     echo "    - [$POSTNAME](./posts/$DIR/$FILE)" >> ../SUMMARY.md
+    cat "$DIR/$FILE" | grep '##' | tr '\n' '\0' |
+    while IFS= read -r -d '' SECTION_RAW
+    do
+      SECTION="$(echo "$SECTION_RAW" | awk '{print substr($0, 4);}')"
+      SECTION_NORMALIZED="$(echo "$SECTION" | sed 's/[A-Z]/\L&/g' | tr ' ' '-' | sed 's/[^a-z0-9-]//g')"
+      echo "      - [$SECTION](./posts/$DIR/$FILE)" >> ../SUMMARY.md
+    done
   done
 done
 
