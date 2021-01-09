@@ -21,7 +21,7 @@ deploy:
   cleanup: false
   token: $GITHUB_TOKEN
   local_dir: ./book
-  keep_history: false
+  keep_history: true
   edge: true
   target_branch: gh-pages
   fqdn: blog.thepuzzlemaker.info

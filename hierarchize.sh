@@ -5,9 +5,9 @@
 #   - [2020-06-03](./posts/2020-06-03/index.md)
 #     - [Hello, world!](./posts/2020-06-03/hello_world.md)
 
-# Remove all content between "## BEGIN AUTO-ADD" and "## END AUTO-ADD"
+# Remove all content between "<!--BEGIN AUTO-ADD-->" and "<!--END AUTO-ADD-->"
 cd src
-sed -i '/^## BEGIN/,/^## END/{/^## BEGIN/!{/^## END/!d}}' SUMMARY.md
+sed -i '/^<!--BEGIN/,/^<!--END/{/^<!--BEGIN/!{/^<!--END/!d}}' SUMMARY.md
 
 SUMMARYLENGTH="$(cat SUMMARY.md | wc -l)"
 head "-n$((SUMMARYLENGTH-1))" SUMMARY.md > SUMMARY.md2
@@ -46,6 +46,6 @@ do
   done
 done
 
-echo "## END AUTO-ADD" >> ../SUMMARY.md
+echo "<!--END AUTO-ADD-->" >> ../SUMMARY.md
 
 cd ../..
