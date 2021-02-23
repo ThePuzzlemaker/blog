@@ -75,6 +75,28 @@ and CTFs, I may eventually port at least some of [pwntools] to Calypso. I might
 end up implementing some of it in Rust, as I do plan to have FFI as a major part
 of Calypso, or at least the VM behind it, Odysseus.
 
+## What Calypso is Not Going to Become
+
+I'm not expecting Calypso to replace Rust or Elixir or JS or Python or, well,
+really anything. It's not created with that in mind--it *definitely* isn't a
+systems language and probably won't have as good concurrency as Elixir (though I
+hope I can make concurrency work pretty well).
+
+I'm hoping Calypso can be used to make applications that could otherwise be made
+in Rust or Elixir but I'm not expecting it to singlehandedly replace the
+entirety of those languages. That's just not a goal for it.
+
+Calypso will probably not be as fast as Rust or Elixir either. It's intended to
+be simple, so it will definitely compile faster than Rust but I'm not expecting
+it to particularly rival performance of either language. It may be about as fast
+as Elixir as some point, but as a non-systems language it's definitely not going
+to rival Rust's performance without JIT (which I currently don't have plans
+for).
+
+## Updates
+
+2021/02/22: Added "What Calypso is Not Going To Become" section
+
 [cal-gh]: https://github.com/calypso-lang/calypso
 [Rust]: https://rust-lang.org
 [Elixir]: https://elixir-lang.org
