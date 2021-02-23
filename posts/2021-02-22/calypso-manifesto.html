@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>2020-06-18 - The Puzzlemaker » Blog</title>
+        <title>What I&#x27;d Like Calypso to Become - The Puzzlemaker » Blog</title>
         
         
 
@@ -98,7 +98,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../basic/about_me.html">About Me</a></li><li class="chapter-item expanded affix "><a href="../../basic/about_this_site.html">About This Site</a></li><li class="chapter-item expanded "><a href="../../posts/index.html">Posts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../posts/2021-02-22/index.html">2021-02-22</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../posts/2021-02-22/calypso-manifesto.html">The Caypso Manifesto</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../posts/2021-02-22/calypso-manifesto.html">The Creation of Calypso</a></li><li class="chapter-item "><a href="../../posts/2021-02-22/calypso-manifesto.html">Calypso's Guiding Principles</a></li><li class="chapter-item "><a href="../../posts/2021-02-22/calypso-manifesto.html">What I'd Like Calypso to Become</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../posts/2020-06-18/index.html" class="active">2020-06-18</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../posts/2020-06-18/dotfiles_done.html">Dotfiles done!</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../posts/2020-06-18/dotfiles_done.html">dotfiles</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../posts/2020-06-03/index.html">2020-06-03</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../posts/2020-06-03/hello_world.html">Hello, world!</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../basic/about_me.html">About Me</a></li><li class="chapter-item expanded affix "><a href="../../basic/about_this_site.html">About This Site</a></li><li class="chapter-item expanded "><a href="../../posts/index.html">Posts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../posts/2021-02-22/index.html">2021-02-22</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../posts/2021-02-22/calypso-manifesto.html" class="active">The Caypso Manifesto</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../posts/2021-02-22/calypso-manifesto.html" class="active">The Creation of Calypso</a></li><li class="chapter-item "><a href="../../posts/2021-02-22/calypso-manifesto.html" class="active">Calypso's Guiding Principles</a></li><li class="chapter-item expanded "><a href="../../posts/2021-02-22/calypso-manifesto.html" class="active">What I'd Like Calypso to Become</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../posts/2020-06-18/index.html">2020-06-18</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../posts/2020-06-18/dotfiles_done.html">Dotfiles done!</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../posts/2020-06-18/dotfiles_done.html">dotfiles</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../posts/2020-06-03/index.html">2020-06-03</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../posts/2020-06-03/hello_world.html">Hello, world!</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -170,19 +170,85 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h1 id="the-caypso-manifesto"><a class="header" href="#the-caypso-manifesto">The Caypso Manifesto</a></h1>
+<p><strong>Note</strong>: Most of these are my own opinions and are not necessarily reflective of
+community of the programming languages in question. (Except, perhaps JS. JS is
+just unequivocally and demonstrably awful.)</p>
+<blockquote>
+<p>Calypso is a mostly imperative language with some functional influences that
+is focues on flexibility and simplicity.</p>
+</blockquote>
+<p>This is the tagline for Calypso on <a href="https://github.com/calypso-lang/calypso">its GitHub page</a>. However, what does
+this mean, exactly? In this post, I’m going to explain my ideology for Calypso:
+why I started writing it, and what I’d like it to become.</p>
+<h2 id="the-creation-of-calypso"><a class="header" href="#the-creation-of-calypso">The Creation of Calypso</a></h2>
+<p>As you may or may not know, I love <a href="https://rust-lang.org">Rust</a> and <a href="https://elixir-lang.org">Elixir</a>. However, there are just
+some things that Elixir isn’t suited for. And there are some things that Rust
+isn’t the best for. Sometimes, Rust seems like overkill or seems like too slow
+of a development time due to its long compilation times or complex type system.
+This draws me towards more dynamic languages like Elixir. However, Elixir, being
+inherently tied to the BEAM and Erlang/OTP, has features like immutable
+variables (though you can rebind them), and OTP is the main “application
+framework” for Elixir/Erlang. OTP is a really good design philosophy for
+applications, but I find that it’s sometimes kind of hard to set up for some
+applications, with its actor concurrency model and supervision. It’s a large
+amount of things to think of while designing even simple applications.</p>
+<p>I have also found that already available scripting-like languages such as JS and
+Python are not really that easy to work with when scaling up; for example, JS,
+with its <strong>MANY</strong> design issues (e.g. implicit coercion), and Python, which
+while working pretty well when scaled up, is kind of hard to maintain in my
+opinion.</p>
+<p>And that’s why I created Calypso. I enjoy Rust and Elixir but for some
+applications, including scripts that are not quite full applications but not
+quite worthy of being a Bash script. Also, sometimes I have applications that
+are not really the best suited for either and are better suited for a more
+dynamic environment. </p>
+<h2 id="calypsos-guiding-principles"><a class="header" href="#calypsos-guiding-principles">Calypso’s Guiding Principles</a></h2>
+<p>Calypso strives to cover these principles:</p>
+<ul>
+<li>Flexibility, i.e. you don’t have to “hack” the language to do more complex
+things.</li>
+<li>Simplicity, i.e. code is expressive but not too verbose.</li>
+<li>A reciprocal combination of these two: flexibility <strong>and</strong> simplicity, i.e.
+allowing simplicity without sacrificing flexibility and allowing flexibility
+without sacrificing simplicity.</li>
+<li>Performance, i.e. code shouldn’t have to be micro-optimized, code should run
+well enough without sacrificing flexibility or simplicity. As I’m not that
+experienced with optimization, this may take a while to implement.</li>
+</ul>
+<p>These principles also apply to the standard library/ies of Calypso, which should
+be expressive but flexible and performant.</p>
+<p>Calypso is mainly influenced by Rust, Elixir, and Erlang. In terms of overall
+architecture, it’s mainly inspired by Rust. However, there are some functional
+influences from both Erlang and Elixir, intended to help ensure flexibility and
+simplicity. Erlang is described as a functional language that breaks free to the
+imperative world at some points, whereas I would describe Calypso as the
+opposite: an imperative language that breaks free to the functional world at
+some points. While these seem like similar concepts, they’re somewhat different
+in nature. Calypso aims to be familiar but introduce some unfamiliar concepts
+from the functional world that can help to keep code short, simple, flexible,
+and maintainable.</p>
+<h2 id="what-id-like-calypso-to-become"><a class="header" href="#what-id-like-calypso-to-become">What I’d Like Calypso to Become</a></h2>
+<p>Personally, I’d like to see Calypso become a language that is used for
+applications, simple and complex, offline and online, command-line and
+graphical.</p>
+<p>As I’m not really a fan of Python, and I’m an enthusiast of binary exploitation
+and CTFs, I may eventually port at least some of <a href="https://github.com/Gallopsled/pwntools#readme">pwntools</a> to Calypso. I might
+end up implementing some of it in Rust, as I do plan to have FFI as a major part
+of Calypso, or at least the VM behind it, Odysseus.</p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../../posts/2021-02-22/calypso-manifesto.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../posts/2021-02-22/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../../posts/2020-06-18/dotfiles_done.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../../posts/2021-02-22/calypso-manifesto.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -194,13 +260,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../../posts/2021-02-22/calypso-manifesto.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../posts/2021-02-22/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../../posts/2020-06-18/dotfiles_done.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../posts/2021-02-22/calypso-manifesto.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
