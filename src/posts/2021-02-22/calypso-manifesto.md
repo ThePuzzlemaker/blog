@@ -5,7 +5,7 @@ community of the programming languages in question. (Except, perhaps JS. JS is
 just unequivocally and demonstrably awful.)
 
 > Calypso is a mostly imperative language with some functional influences that
-> is focues on flexibility and simplicity.
+> is focused on flexibility and simplicity.
 
 This is the tagline for Calypso on [its GitHub page][cal-gh]. However, what does
 this mean, exactly? In this post, I'm going to explain my ideology for Calypso:
@@ -35,7 +35,7 @@ And that's why I created Calypso. I enjoy Rust and Elixir but for some
 applications, including scripts that are not quite full applications but not
 quite worthy of being a Bash script. Also, sometimes I have applications that
 are not really the best suited for either and are better suited for a more
-dynamic environment. 
+dynamic environment.
 
 ## Calypso's Guiding Principles
 
